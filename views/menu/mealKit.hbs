@@ -1,0 +1,26 @@
+
+    
+{{#each data}}
+<div class="mealKit">
+    <div class="card mb-3">
+        <div class="mealKit-img">
+            <img src="{{cover}}" alt="{{name}}"/>
+        </div>  
+  <div class="card-body">
+    <h5 class="card-title"> <h4 class="food-title">{{this.name}}</h4></h5>
+    <p class="card-text"> <p>{{this.ingredients}}</p>
+          <p class="card-text">{{this.description}}</p>
+          <p class="calories text-muted">Calories : {{this.calories}}</p>
+          <p class="calories text-muted">Cooking Time : {{this.cookingTime}}</p>
+          
+          <div class="d-flex justify-content-between align-items-center">
+             <span class="price">{{this.currency}} {{this.price}}</span></p>
+             <form action="/menu/add-cart" method="post" enctype="multipart/form-data">
+       <input type="text" class="form-control food-title hide" name="mealId" id="mealId" value="{{_id}}" readonly/>        
+        <p class="card-text"> <button type="submit">Add to Order</button></p>
+    </form>
+  </div>
+        </div>
+</div>
+{{/each}}
+

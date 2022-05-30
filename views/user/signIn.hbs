@@ -1,0 +1,45 @@
+
+<div class="login-body">
+    <main class="form-signin">
+
+      <form method="post" action="/user/signIn">
+       
+        <h1 class="h3 fw-normal">Welcome Back , </h1>
+    
+        <div class="form-floating">
+          <input type="text" class="form-control" id="floatingInput" name="loginEmail" placeholder="name@example.com" value="{{values.loginEmail}}">
+          <label for="floatingInput">Email address</label>
+           {{#if fMsg}}
+            <span style="color: red;">{{fMsg}}</span><br/>
+           {{/if}}
+
+        </div>
+        <div class="form-floating">
+          <input type="password" class="form-control" id="floatingPassword" name="password" placeholder="Password">
+          <label for="floatingPassword">Password</label>
+           {{#if fpass}}
+            <span style="color: red;">{{fpass}}</span><br/>
+           {{/if}}
+           
+
+        </div>
+    
+        <div class="mb-3">   
+            {{#if inPass}}
+           <span style="color: red;">{{inPass}}</span><br/>
+           {{/if}}
+
+            <input type="radio" id="customer" name="uType" value="customer" checked>
+            <label for="customer">Customer</label> 
+            <input type="radio" id="clerk" name="uType" value="clerk"> 
+            <label for="clerk">Clerk</label> 
+
+           {{#if noUser}}
+           <span style="color: red;">{{noUser}}</span><br/>
+           {{/if}}
+        </div>
+        <input type="submit" class="w-100 btn btn-lg btn-primary" type="submit" value="Sign In">
+        
+      </form>
+    </main>
+    </div>

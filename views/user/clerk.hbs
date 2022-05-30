@@ -1,0 +1,101 @@
+<div class="welcome">
+  <div class="welcomeMsg">
+    <form method="post" action="/menu/addNew" enctype="multipart/form-data">
+      <div class="profile">
+       
+       <h1>Add New Meal kit</h1>
+        <div class="profile-content">              
+            <table>
+              <tr>
+                <td>Name : </td>
+                <td><input type="text" class="form-control food-title" name="name" id="name" placeholder="Name" value=""></td>
+              </tr>
+              <tr>
+                <td>Price :</td>
+                <td><input type="text" class="form-control food-title" name="price" id="price" placeholder="Price" value=""></td>
+              </tr>
+              <tr>
+                <td> Currency :</td>
+                <td><input type="text" class="form-control food-title" name="currency" id="currency" placeholder="currency" value=""></td>
+              </tr>
+              <tr>
+                <td>Description :</td>
+                <td><textarea class="form-control food-title" name="description" id="description" placeholder="description" ></textarea></td>
+              </tr>
+              <tr>
+                <td>Ingredients : </td>
+                <td><input type="text" class="form-control food-title" name="ingredients" id="ingredients" placeholder="ingredients" value=""></td>
+              </tr>
+              <tr>
+                <td>Category :</td>
+                <td><input type="text" class="form-control food-title" name="category" id="category" placeholder="category" value=""></td>
+              </tr>
+              <tr>
+                <td>Cooking Time :</td>
+                <td><input type="text" class="form-control food-title" name="cookingTime" id="cookingTime" placeholder="cookingTime" value=""></td>
+              </tr>
+              <tr>
+                <td>Calories :</td>
+                <td><input type="text" class="form-control food-title" name="calories" id="calories" placeholder="calories" value=""></td>
+              </tr>
+              <tr>
+                <td>TopMeal :</td>
+                <td><input type="text" class="form-control food-title" name="topMeal" id="topMeal" placeholder="topMeal" value=""></td>
+              </tr>
+              <tr>
+                <td>Meal Image :</td>
+                <td><input type="file" class="form-control food-title" name="cover" id="cover"></td>
+              </tr>
+              <tr>
+                <td><button type="submit">Add NEW MEAL-KiT</button></td>
+                
+              </tr>            
+            </table>
+                     
+        </div>
+       
+        
+          
+        
+        
+      </div>
+    </form>
+
+<h1>Update New Meal Kit</h1>
+
+
+ {{#each data}}
+     <form method="post" action="/menu/updateMeal" enctype="multipart/form-data">
+     <div class="card mb-3">
+        <div class="row no-gutters">
+    <div class="col-md-4">
+      <div class="card-img item-img"><img src="{{cover}}" alt="Picture uploaded successfully but sorry work in progress" /></div>      
+    </div>
+    <div class="col-md-8">
+      <div class="card-body">
+        <h5 class="card-title"><input type="text" class="form-control food-title" name="mealId" id="mealId" value="{{this._id}}" readonly/>
+                  <input type="text" class="form-control food-title" name="name" id="name" placeholder="meal" value="{{this.name}}"></h5>
+        <p class="card-text">
+                  <input type="text" class="form-control food-title" name="price" id="price" placeholder="meal" value="{{this.price}}">
+                  <input type="text" class="form-control food-title" name="currency" id="currency" placeholder="currency" value="">
+                  <textarea class="form-control food-title" name="description" id="description" placeholder="description" >{{this.description}}</textarea>
+                  <input type="text" class="form-control food-title" name="ingredients" id="ingredients" placeholder="meal" value="{{this.ingredients}}">
+                  <input type="text" class="form-control food-title" name="category" id="category" placeholder="category" value="{{this.category}}">
+                  <input type="text" class="form-control food-title" name="cookingTime" id="cookingTime" placeholder="cookingTime" value="{{this.cookingTime}}">
+                  <input type="text" class="form-control food-title" name="topMeal" id="topMeal" placeholder="topMeal" value="{{this.topMeal}}">
+                  <input type="file" class="form-control food-title" name="cover" id="cover">
+
+        </p>
+        <p class="card-text"><button type="submit">Update</button></p>
+      </div>
+    </div>
+  </div>
+</div>        
+             
+            
+          </form>
+          {{/each}}
+        </div>
+      </div>
+  </div>
+</div>

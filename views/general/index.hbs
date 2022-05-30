@@ -1,0 +1,75 @@
+<!-- content -->
+ {{>hero}}
+<div class="content">
+  <div class="c-title">
+    <h2>We are <span class="blue">FunFood</span></h2>
+    <p>We deliver delicious Dishes.</p>
+  </div>
+    <div class="row">
+      <div class="col">
+        <div class="service-box">
+          <img src="static/img/content1.jpg">
+           <h4>We create original recipes.</h4>
+           <p>Our in-house culinary team uses premium ingredients to create unique menus and products for breakfast, lunch, and dinner.</p>           
+       </div>
+      </div>
+
+      <div class="col">
+        <div class="service-box">
+          <img src="static/img/affordable.jpg">
+          <h4>Affordable plans</h4>
+          <p>Our goal is to give you a unique experience that will not break the bank.</p>          
+        </div>
+      </div>
+
+      <div class="col">
+        <div class="service-box">
+          <img src="static/img/chef.jpg">
+          <h4>Professional, talented chefs</h4>
+          <p>Our chefs are put through an in-depth interview process and testing. They are serve safe certified, insured and experienced.</p>
+         </div>
+      </div>
+
+      <div class="col">
+        <div class="service-box">
+          <img src="static/img/flexible.jpg">
+          <h4>Flexible Options</h4>
+          <p>We can tailor this experience to suit your needs and those of your family.</p>  
+        </div>
+      </div>
+    </div>
+</div>
+
+<!-- menu -->
+<div class="on-menu">
+  <h2><span class="blue">Chef 's </span>special Today !!!</h2>
+  <p>Try something Delicious !</p>
+ 
+  <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+       {{#each meals}}
+    <div class="col item-card">
+      <div class="card shadow-sm">
+        <div class="card-img item-img">
+          <img src="{{cover}}"/>
+        </div>
+
+        <div class="card-body">
+          <h4 class="food-title">{{this.name}}</h4>
+          <p>{{this.ingredients}}</p>
+          <p class="card-text">{{this.description}}</p>
+          <p class="calories text-muted">Calories : {{this.calories}}</p>
+          <div class="d-flex justify-content-between align-items-center">
+          <span class="price">{{this.currency}} {{this.price}}</span>                         
+             <div class="btn-group">
+              <a href="/user/signIn" class="btn btn-primary btn-large">Order Now ?</a>              
+            </div>
+         
+          </div>
+        </div>
+      </div>
+    </div>
+      {{/each}}
+  </div>
+  
+</div>
+</div>

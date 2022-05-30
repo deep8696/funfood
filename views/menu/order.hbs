@@ -1,0 +1,29 @@
+{{#if message}}
+        <h3 style="color: red;">{{message}}</h3>
+    {{/if}}
+
+{{#if hasMeals}}
+        <table border="1" cellspacing="2" cellpadding="2">
+            <tr>
+              
+                <th>Name</th>
+                
+                <th>Quantity</th>
+            </tr>
+
+            {{#each meals}}
+                <tr>                   
+                    <td>{{this.name}}</td>
+                    <td></td>
+                    <td>{{qty}}</td>
+                </tr>
+            {{/each}}
+        </table>
+        <h2>Cart Total: {{cartTotal}}</h2>
+
+    <form action="/menu/place-order" method="post">
+        <button class="w-100 btn btn-lg btn-primary" type="submit">Place Order</button>
+    </form>
+    {{/if}}
+
+    

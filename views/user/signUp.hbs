@@ -1,0 +1,70 @@
+ <div class="signup">
+        <div class="container">
+          <main>
+            <div class="py-5 text-center">
+             
+                <h4>Join with<span class="title"> FunFood , </span>today</h4>
+            </div>     
+              <div class="col-12 signup-tab">                
+                <form method="post" action="/user/signUp" class="signUp-form">
+
+                  <div class="row g-3">
+                    <div class="col-sm-6">
+                      <label for="firstName" class="form-label">First Name</label>
+                      <input type="text" class="form-control" name="firstName" id="firstName" placeholder="abc" value="{{values.firstName}}">
+                       {{#if emptyF}}
+                           <span style="color: red;">{{emptyF}}</span><br/>
+                       {{/if}}
+                       {{#if shortF}}
+                           <span style="color: red;">{{shortF}}</span><br/>
+                       {{/if}}
+                    </div>
+        
+                    <div class="col-sm-6">
+                      <label for="lastName" class="form-label">Last Name</label>
+                      <input type="text" class="form-control" name="lastName" id="lastName" placeholder="xyz" value="{{values.lastName}}">
+                     {{#if emptyL}}
+                           <span style="color: red;">{{emptyL}}</span><br/>
+                       {{/if}}
+                       {{#if shortL}}
+                           <span style="color: red;">{{shortL}}</span><br/>
+                       {{/if}}
+                    </div>
+                              
+                    <div class="col-12">
+                      <label for="email" class="form-label">E-Mail Address</label>
+                      <input type="text" class="form-control" id="email" name="email" placeholder="you@example.com" value="{{values.email}}">
+                      {{#if emailF}}
+                           <span style="color: red;">{{emailF}}</span><br/>
+                       {{/if}}
+                       {{#if existUser}}
+                           <span style="color: red;">{{existUser}}</span><br/>
+                       {{/if}}
+                    </div>
+        
+                    <div class="col-12">
+                      <label for="password" class="form-label">Password</label>
+                      <input type="password" class="form-control" id="password" name="password" placeholder="Enter Password here">
+                     {{#if passwordE}}
+                           <span style="color: red;">{{passwordE}}</span><br/>
+                       {{/if}}
+                        {{#if passwordF}}
+                           <span style="color: red;">{{passwordF}}</span><br/>
+                       {{/if}}
+                         {{#if failMail}}
+                           <span style="color: red;">{{failMail}}</span><br/>
+                       {{/if}}
+                    </div>
+
+                    
+                  </div>
+                  </br>
+                  <button class="w-100 btn btn-lg btn-primary" type="submit">Sign Up</button>
+                </form>
+              </div>
+            </div>
+          </main>
+        
+         
+        </div>
+        </div>

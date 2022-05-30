@@ -1,0 +1,19 @@
+  <!-- Hero -->
+<div class="hero">
+      <section class="bgimage">
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                <div class="hero-text">  
+                    <h3>Eat the way you like.</h3>
+                    <h4>Try with<span class="title"> FunFood , </span>today</h4>
+                    {{#if user}}
+                     <p><a href="/menu/menuList" class="btn btn-primary btn-large">Order Today</a></p></div>
+                     {{else}}
+                    <p><a href="/user/signUp" class="btn btn-primary btn-large">Join Today</a></p></div>
+                     {{/if}}
+                </div>
+          </div>
+        </div>
+      </section>
+</div>
