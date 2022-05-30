@@ -5,6 +5,4 @@ I declare that this assignment is my own work in accordance with the Seneca Acad
  Course/Section: WEB322 ZAA
   
   
-  ## Project URLs
-  GitHub Repository: https://github.com/drpatel33/FunFood 
-  Heroku URL: https://funfood-web322.herokuapp.com/
+ 
